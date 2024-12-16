@@ -188,7 +188,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/pddl_pipeline.png" alt="The Pipeline of our method" width="100%"/>
@@ -203,8 +203,21 @@
       </h2>
     </div>
   </div>
+</section> -->
+<section class="hero teaser"></section>
+  <div class="container is-max-desktop">
+        <div class="content has-text-centered">
+          <img src="./static/images/pddl_pipeline.png" alt="The Pipeline of our method" width="100%"/>
+          <p>We adopt formal language-PDDL as an intermediate abstraction for planning. 
+            The upper domain generation process shows how we generate an error-free and logically correct PDDL domain, which involves reducing the search space by focusing LLMs on predicates and actions.
+            We employ BoN sampling to consider multiple possible domain actions simultaneously.
+            We then use verbalized machine learning to iteratively refine and improve the sampled domains in the text space.
+            The downward planning blocks show how we generate the plan. 
+           Once we have a synthetic PDDL domain that passes PDDL grammar checks, we combine it with a PDDL problem, then leverage searching algorithms such as  A$\ast$ to search for the optimal plan.</p>
+        </div>
+    </div>
+  </div>
 </section>
-
 
 
 <section class="section">
