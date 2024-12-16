@@ -240,7 +240,226 @@
     </div>
     <!--/ Abstract. -->
 
-
+    <table>
+      <caption>Comparison of the performance on PDDL Domain synthesis.</caption>
+      <thead>
+          <tr>
+              <th>Model</th>
+              <th># Params</th>
+              <th>NL2Domain</th>
+              <th>Problem2Domain</th>
+              <th>Avg.</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td colspan="5"><em>Open-Source Models</em></td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>0.5B</td>
+              <td>0.0</td>
+              <td>0.0</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>1.5B</td>
+              <td>0.0</td>
+              <td>0.0</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>3B</td>
+              <td>2.1</td>
+              <td>1.5</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>7B</td>
+              <td>5.7</td>
+              <td>11.7</td>
+              <td>8.7</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>14B</td>
+              <td>21.6</td>
+              <td>25.3</td>
+              <td>23.5</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>32B</td>
+              <td>24.0</td>
+              <td>31.6</td>
+              <td>27.8</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Instruct</td>
+              <td>72B</td>
+              <td>38.5</td>
+              <td>32.8</td>
+              <td>35.7</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Coder</td>
+              <td>1.5B</td>
+              <td>0.0</td>
+              <td>0.0</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>Qwen2.5-Coder</td>
+              <td>7B</td>
+              <td>21.9</td>
+              <td>18.4</td>
+              <td>20.2</td>
+          </tr>
+          <tr>
+              <td colspan="5"><em>Closed-Source Models</em></td>
+          </tr>
+          <tr>
+              <td>GPT-4o</td>
+              <td>-</td>
+              <td>5.3</td>
+              <td>50.0</td>
+              <td>27.7</td>
+          </tr>
+          <tr>
+              <td>o1-mini</td>
+              <td>-</td>
+              <td>41.7</td>
+              <td>33.7</td>
+              <td>37.7</td>
+          </tr>
+          <tr>
+              <td>o1-preview</td>
+              <td>-</td>
+              <td>55.8</td>
+              <td>52.4</td>
+              <td>54.1</td>
+          </tr>
+          <tr>
+              <td colspan="5"><em>Our Methods</em></td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>0.5B</td>
+              <td>0.0 (+0.0)</td>
+              <td>0.0 (+0.0)</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>1.5B</td>
+              <td>2.1 (+2.1)</td>
+              <td>0.3 (+0.3)</td>
+              <td>1.2</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>3B</td>
+              <td>11.7 (+9.5)</td>
+              <td>1.2 (+0.3)</td>
+              <td>6.5</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>7B</td>
+              <td>9.2 (+3.5)</td>
+              <td>34.6 (+22.9)</td>
+              <td>21.9</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>14B</td>
+              <td>51.6 (+30.0)</td>
+              <td>62.0 (+36.7)</td>
+              <td>56.8</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instrcut</td>
+              <td>32B</td>
+              <td>66.8 (+46.7)</td>
+              <td>71.1 (+39.5)</td>
+              <td>70.9</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Instruct</td>
+              <td>72B</td>
+              <td>60.8 (+22.3)</td>
+              <td>73.8 (+41.0)</td>
+              <td>67.3</td>
+          </tr>
+          <tr>
+              <td>BoN-8-Qwen2.5-Coder</td>
+              <td>7B</td>
+              <td>73.1 (+51.2)</td>
+              <td>63.3 (+44.9)</td>
+              <td>68.2</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>0.5B</td>
+              <td>0.0 (+0.0)</td>
+              <td>0.0 (+0.0)</td>
+              <td>0.0</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>1.5B</td>
+              <td>2.8 (+2.8)</td>
+              <td>0.3 (+0.3)</td>
+              <td>1.6</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>3B</td>
+              <td>18.7 (+16.6)</td>
+              <td>1.8 (+0.3)</td>
+              <td>10.3</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>7B</td>
+              <td>21.9 (+16.2)</td>
+              <td>49.1 (+37.3)</td>
+              <td>35.5</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>14B</td>
+              <td>77.0 (+55.4)</td>
+              <td>80.4 (+55.1)</td>
+              <td>78.7</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>32B</td>
+              <td>86.2 (+62.2)</td>
+              <td>90.9 (+59.3)</td>
+              <td>88.6</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Instruct</td>
+              <td>72B</td>
+              <td>78.4 (+39.9)</td>
+              <td>86.4 (+53.6)</td>
+              <td>82.4</td>
+          </tr>
+          <tr>
+              <td>VML-5-BoN-8-Qwen2.5-Coder</td>
+              <td>7B</td>
+              <td>85.2 (+63.3)</td>
+              <td>71.4 (+53.0)</td>
+              <td>78.3</td>
+          </tr>
+      </tbody>
+  </table>
+  
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -287,29 +506,12 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
+            The website is based on <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
