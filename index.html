@@ -206,13 +206,8 @@
   <div class="container is-max-desktop">
         <div class="content has-text-centered">
           <h2 class="title is-3">Pipeline</h2>
-          <img src="./static/images/pddl_pipeline.png" alt="The Pipeline of our method" width="100%"/>
-          <p>We adopt formal language-PDDL as an intermediate abstraction for planning. 
-            The upper domain generation process shows how we generate an error-free and logically correct PDDL domain, which involves reducing the search space by focusing LLMs on predicates and actions.
-            We employ BoN sampling to consider multiple possible domain actions simultaneously.
-            We then use verbalized machine learning to iteratively refine and improve the sampled domains in the text space.
-            The downward planning blocks show how we generate the plan. 
-           Once we have a synthetic PDDL domain that passes PDDL grammar checks, we combine it with a PDDL problem, then leverage searching algorithms such as  A$\ast$ to search for the optimal plan.</p>
+          <img src="./static/images/pipeline_v4.png" alt="The test-time scaling pipeline" width="100%"/>
+          <p></p>
         </div>
     </div>
   </div>
@@ -243,17 +238,17 @@ By taking advantage of PDDL as state abstraction, our method is able to outperfo
     <!--/ Comparison of the performance on PDDL Domain synthesis. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Comparison of the performance on PDDL Domain synthesis.</h2>
-        <img src="./static/images/compare.png" alt="Comparison of the performance on PDDL Domain synthesis." width="100%"/>
+        <h2 class="title is-3">A comparison of performance in PDDL domain synthesis.</h2>
+        <img src="./static/images/compare.png" alt="A comparison of performance in PDDL domain synthesis." width="100%"/>
       </div>
     </div>
 
     <!--/ Comparison of various initialization methods-->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Comparison of various initialization methods.</h2>
+        <h2 class="title is-3">Ablation study of initialization strategies</h2>
         <figure class="image is-centered">
-          <img src="./static/images/VML_initial.png" alt="Comparison of various initialization methods." width="100%"/>
+          <img src="./static/images/VML_initial.png" alt="Ablation Study of initialization strategies" width="100%"/>
         </figure>
       </div>
     </div>
@@ -263,7 +258,17 @@ By taking advantage of PDDL as state abstraction, our method is able to outperfo
       <div class="column is-four-fifths">
         <h2 class="title is-3">Case Study: compare VML with BoN.</h2>
         <figure class="image is-centered">
-          <img src="./static/images/case_study.png" alt="Case Study: compare VML with BoN." width="100%"/>
+          <img src="./static/images/case.png" alt="Case Study: compare iVML with BoN." width="100%"/>
+        </figure>
+      </div>
+    </div>
+
+    <!--/ NL2Prob-->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">PDDL problem generation</h2>
+        <figure class="image is-centered">
+          <img src="./static/images/NL2prob.png" alt="PDDL problem generation" width="100%"/>
         </figure>
       </div>
     </div>
